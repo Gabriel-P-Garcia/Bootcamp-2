@@ -22,6 +22,8 @@
 
 * Capacidade de salvar "loadouts" com listas completas e capacidade de nomear esses "loadouts"
 
+* Criar funcionalidades de favicon
+
 ## Como Usar:
 
 * Digite o item desejado na barra de texto. Para enviar você pode usar tanto o botão "Adicionar" quanto pressionar ENTER no teclado;
