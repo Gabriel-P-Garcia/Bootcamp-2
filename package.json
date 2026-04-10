@@ -1,0 +1,27 @@
+{
+  "name": "bootcamp-2",
+  "version": "1.0.0",
+  "description": "- Aluno: Gabriel Pereira Garcia",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabriel-P-Garcia/Bootcamp-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabriel-P-Garcia/Bootcamp-2/issues"
+  },
+  "homepage": "https://github.com/Gabriel-P-Garcia/Bootcamp-2#readme",
+  "devDependencies": {
+    "cypress": "^15.13.1"
+  }
+}

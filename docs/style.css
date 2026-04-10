@@ -111,3 +111,11 @@ li {
     margin: 30px 0 15px 0;
     border-top: 2px dashed #ccc;
 }
+
+
+/* Footer da versão */
+.versao{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #494949;
+}
