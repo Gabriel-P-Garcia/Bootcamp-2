@@ -1,4 +1,6 @@
-- Projeto Bootcamp II - Lista de compras
+# Projeto Bootcamp II - Lista de compras
+
+- Aluno: Gabriel Pereira Garcia
 
 * Este é um projeto feito para a matéria de Bootcamp II do aluno Gabriel Pereira Garcia, feito durante seu terceiro semestre do curso de Análise e Desenvolvimento de Sistemas, no primeiro semestre de 2026.
 
@@ -11,3 +13,11 @@
 * Os itens da checklist que forem marcados podem ser salvos no histórico de compras do usuario para que eles possam ser inseridos inseridos na lista novamente no futuro sem a necessidade de escrever o item novamente. Os dados presentes tanto na lista quanto no histórico são transformados em texto e armazenados como JSON (Através do comando "JSON.stringify(itensAtuais)") no proprio navegador do usuário. Não há coleta de dados do usuário sendo feitas pela aplicação.
 
 * A intenção inicial da aplicação é deixa-la disponível para uso através do github sites.
+
+## Funcionalidades futuras planejadas:
+
+* No futuro irei otimizar a aplicação para funcionamento em dispositivos móveis
+
+* Modo escuro
+
+* Capacidade de salvar "loadouts" com listas completas e capacidade de nomear esses "loadouts"
