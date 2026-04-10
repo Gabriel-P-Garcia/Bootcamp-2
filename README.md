@@ -21,3 +21,16 @@
 * Modo escuro
 
 * Capacidade de salvar "loadouts" com listas completas e capacidade de nomear esses "loadouts"
+
+* Criar funcionalidades de favicon
+
+## Como Usar:
+
+* Digite o item desejado na barra de texto. Para enviar você pode usar tanto o botão "Adicionar" quanto pressionar ENTER no teclado;
+* Clique na checkbox quando seu item não for mais necessário;
+* Os itens riscados na lista podem ser adicionados ao histórico de itens usando o botão "Salvar Itens Marcados no Histórico";
+* Se desejar, você pode re-adicionar itens do histórico caso for necessário em compras futuras.
+* A qualquer momento você pode escolher deletar itens da sua lista ou de seu histórico.
+
+# LINK DA APLICAÇÂO:
+https://gabriel-p-garcia.github.io/Bootcamp-2/
