@@ -29,3 +29,6 @@
 * Os itens riscados na lista podem ser adicionados ao histórico de itens usando o botão "Salvar Itens Marcados no Histórico";
 * Se desejar, você pode re-adicionar itens do histórico caso for necessário em compras futuras.
 * A qualquer momento você pode escolher deletar itens da sua lista ou de seu histórico.
+
+# LINK DA APLICAÇÂO:
+https://gabriel-p-garcia.github.io/Bootcamp-2/
