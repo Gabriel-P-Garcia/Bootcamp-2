@@ -34,3 +34,7 @@
 
 # LINK DA APLICAÇÂO:
 https://gabriel-p-garcia.github.io/Bootcamp-2/
+
+## Teste automatizado
+
+* Os teste automatizados da aplicação podem ser encontrados em /cypress/e2e/lista.cy.js
