@@ -38,3 +38,7 @@ https://gabriel-p-garcia.github.io/Bootcamp-2/
 ## Teste automatizado
 
 * Os teste automatizados da aplicação podem ser encontrados em /cypress/e2e/lista.cy.js
+
+# NOVO BRANCH - Versão 2.0.0 - Implementação do JSONBin.io
+
+* https://github.com/Gabriel-P-Garcia/Bootcamp-2/tree/V-2.0.0---Entrega-Intermediária
