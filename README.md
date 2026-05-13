@@ -34,3 +34,11 @@
 
 # LINK DA APLICAÇÂO:
 https://gabriel-p-garcia.github.io/Bootcamp-2/
+
+## VERSÃO 2.0.0 - O QUE HÁ DE NOVO?
+
+* A versão 2.0.0 tras a funcionalidade de salvar suas listas na nuvem utilizando a API JSONBin.io.
+
+* Para salvar sua lista basta clicar no botão "Subir Lista para a Nuvem", a aplicação então irá gerar um código correspondente a sua lista de compras. Guarde este código e insira ele no campo "Cole o código da lista aqui" para carregar sua lista de compras.
+
+* Esta utilidade é recomendada caso queira abrir sua lista de compras em outros dispositivos ou em caso de perda dos dados locais que contêm sua lista de compras.

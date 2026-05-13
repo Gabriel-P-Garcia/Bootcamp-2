@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Compras</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Icone_lista.png">
 </head>
 <body>
 
@@ -27,11 +28,25 @@
 
     <script src="codigo.js"></script>
 
+    <!-- Seção de Sincronização na Nuvem -->
+    <div style="background: #e3f2fd; padding: 15px; border-radius: 4px; margin-top: 20px;">
+        <h3 style="margin-top: 0; color: #1565c0; font-size: 16px;">Salvar sua lista (Guarde o código para ver a lista em outros dispositivos)</h3>
+        
+        <button onclick="salvarNaNuvem()" style="background-color: #1976d2; margin-bottom: 10px;">
+            Subir Lista para a Nuvem
+        </button>
+        
+        <div style="display: flex; gap: 10px;">
+            <input type="text" id="inputNuvem" placeholder="Cole o código da lista aqui">
+            <button onclick="carregarDaNuvem()" style="background-color: #ff9800;">Baixar Lista</button>
+        </div>
+    </div>
+
 </body>
 
 <footer>
     <div class="versao">
-        Lista de Compras v1.0.0
+        Lista de Compras v2.0.0 - <a href="https://github.com/Gabriel-P-Garcia/Bootcamp-2" target="_blank">Documentação</a>
     </div>
 </footer>
 </html>

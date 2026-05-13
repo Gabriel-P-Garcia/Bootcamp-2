@@ -1,3 +1,7 @@
+// URL base da versão 3 da API do JSONBin
+const JSONBIN_URL = 'https://api.jsonbin.io/v3/b';
+
+
 // Arrays para armazenar os dados na memória enquanto a página está aberta
 let itensAtuais = [];
 let itensHistorico = [];
@@ -135,3 +139,87 @@ document.getElementById('itemInput').addEventListener('keypress', function (e) {
         adicionarItem();
     }
 });
+
+// Função para enviar dados atuais para a nuvem
+async function salvarNaNuvem() {
+    // Objeto contendo as duas listas
+    const dadosParaNuvem = {
+        compras_atuais: itensAtuais,
+        compras_historico: itensHistorico
+    };
+
+    try {
+        // Avisa o usuário que o processo começou (depende da internet)
+        alert('Salvando na nuvem, aguarde um momento...');
+
+        // 'fetch' para a requisição POST
+        const resposta = await fetch(JSONBIN_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-Access-Key': '$2a$10$Kr7yqK8FdntCOX9yGjMLsOIeJ8cagcazjEsL7a5CC2bb4PWhWQdUG'
+            },
+            body: JSON.stringify(dadosParaNuvem) // Transforma os dados em texto JSON
+        });
+
+        // Converte a resposta do servidor de volta para um objeto JavaScript
+        const resultado = await resposta.json();
+        
+        // O JSONBin devolve um ID único chamado "metadata.id"
+        const idGerado = resultado.metadata.id;
+
+        // Mostrar o código para o usuário copiar
+        prompt('Salvo com sucesso! Copie o código abaixo para carregar esta lista em outro dispositivo:', idGerado);
+
+    } catch (erro) {
+        console.error('Erro ao salvar:', erro);
+        alert('Ocorreu um erro ao tentar salvar na nuvem. Verifique sua conexão.');
+    }
+}
+
+// Função para BUSCAR (Fazer Download) dos dados da nuvem
+async function carregarDaNuvem() {
+    const inputId = document.getElementById('inputNuvem');
+    const codigoLoadout = inputId.value.trim();
+
+    // Trava de segurança: impede de buscar se o campo estiver vazio
+    if (codigoLoadout === '') {
+        alert('Por favor, cole um código válido antes de buscar.');
+        return;
+    }
+
+    try {
+        alert('Buscando dados na nuvem, aguarde...');
+
+        // Requisição GET 
+        const resposta = await fetch(`${JSONBIN_URL}/${codigoLoadout}`, {
+            method: 'GET',
+            headers: {
+                'X-Access-Key': '$2a$10$Kr7yqK8FdntCOX9yGjMLsOIeJ8cagcazjEsL7a5CC2bb4PWhWQdUG'
+            }
+        });
+
+        if (!resposta.ok) {
+            throw new Error('Código não encontrado ou inválido.');
+        }
+
+        const resultado = await resposta.json();
+
+        // O JSONBin guarda o JSON original dentro de "record"
+        const dadosBaixados = resultado.record;
+
+        // Substitui as listas atuais pelas listas que vieram da nuvem
+        itensAtuais = dadosBaixados.compras_atuais || [];
+        itensHistorico = dadosBaixados.compras_historico || [];
+
+        // Salva as novas listas no localStorage 
+        atualizarLocalStorage();
+        
+        inputId.value = ''; // Limpa o campo
+        alert('Lista carregada com sucesso!');
+
+    } catch (erro) {
+        console.error('Erro ao carregar:', erro);
+        alert('Erro ao buscar a lista. Verifique se o código está correto.');
+    }
+}
